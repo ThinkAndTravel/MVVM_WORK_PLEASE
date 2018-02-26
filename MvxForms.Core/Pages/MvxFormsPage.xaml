@@ -5,8 +5,14 @@
     xmlns:local="clr-namespace:MvxForms.Core.Pages"
     x:Class="MvxForms.Core.Pages.MvxFormsPage"
     xmlns:viewModels="clr-namespace:MvxForms.Core.ViewModels;assembly=MvxForms.Core"
-    xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms">
-	<ContentPage.Content>
-        <Label Text="MvvmCross and Xamarin.Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
-	</ContentPage.Content>
-</d:MvxContentPage>
+    xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+             >
+  <ContentPage.Content>
+    <StackLayout Spacing="10" x:Name="layout">
+      <Button Command="{Binding MainPageCommand}" Text="го" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+      <BoxView Color="Yellow" HorizontalOptions="FillAndExpand" />
+      <Label Text="MvvmCross and Xamarin.Forms два брата анальных акробата!" VerticalOptions="Center" HorizontalOptions="Center" />
+    </StackLayout>
+  </ContentPage.Content>
+  </d:MvxContentPage>
+<!--</d:MvxContentPage>-->

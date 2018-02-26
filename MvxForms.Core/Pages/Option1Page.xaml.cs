@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using MvvmCross.Forms.Views;
+using MvxForms.Core.ViewModels;
 
 namespace MvxForms.Core.Pages
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Option1Page : ContentPage
+ //   [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Option1Page : MvxContentPage<Option1ViewModel>
     {
         public Option1Page()
         {

@@ -12,9 +12,9 @@ namespace MvxForms.Core.ViewModels
     /// This sample will put a simple ListView in the Master and reacts to changes in 
     /// In every platform: use the right Presenter (MvxFormsDroidMasterDetailPagePresenter, ...)
     /// </summary>
-    public class MainViewModel : MvxMasterDetailViewModel<RootContentViewModel>
+    public class MainViewModel : MvxViewModel// MvxMasterDetailViewModel<RootContentViewModel>
     {
-        private MenuItem _menuItem;
+     /*   private MenuItem _menuItem;
         public MenuItem SelectedMenu
         {
             get
@@ -58,24 +58,24 @@ namespace MvxForms.Core.ViewModels
                     ShowViewModel(vmType, presentationBundle: presentationBundle);
                 }));
             }
-        }
+        }*/
 
         public MainViewModel()
         {
-            Menu = new[] {
+       /*     Menu = new[] {
                 new MenuItem { Title = "Opción 1", Description = "Descripción Opción 1", ViewModelType = typeof(Option1ViewModel) },
                 new MenuItem { Title = "Opción 2", Description = "Descripción Opción 2", ViewModelType = typeof(Option2ViewModel) },
                 new MenuItem { Title = "Opción 3", Description = "Descripción Opción 3", ViewModelType = typeof(Option3ViewModel) }
-            };
+            };*/
            
         }
-
+/*
         public override void RootContentPageActivated()
         {
             // When user go backs to root page in NavigationPage (using UI back or changing option in Menu)
             // we unset the SelectedItem of our list
             SelectedMenu = null;
-        }
+        }*/
     }
 
     public class MenuItem

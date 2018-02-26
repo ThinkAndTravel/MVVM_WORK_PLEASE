@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MvxForms.Core.Pages.RootContentPage"
-             Title="Root ContentPage" BackgroundColor="Silver">
-    <StackLayout>
-        <Label Text="dfdffsfdsf" VerticalOptions="Center" HorizontalOptions="Center" />
-    </StackLayout>
-</ContentPage>
+<d:MvxContentPage x:TypeArguments="viewModels:RootContentViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MvxForms.Core.Pages"
+    x:Class="MvxForms.Core.Pages.RootContentPage"
+    xmlns:viewModels="clr-namespace:MvxForms.Core.ViewModels;assembly=MvxForms.Core"
+    xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms">
+</d:MvxContentPage>
