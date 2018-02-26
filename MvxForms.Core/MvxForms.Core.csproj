@@ -36,29 +36,22 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Option1Page.xaml.cs">
-      <DependentUpon>Option1Page.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Option2Page.xaml.cs">
-      <DependentUpon>Option2Page.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Option3Page.xaml.cs">
-      <DependentUpon>Option3Page.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\RootContentPage.xaml.cs">
-      <DependentUpon>RootContentPage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Pages\RootPage.xaml.cs" />
+    <Compile Include="Pages\SplitDetailNavPage.xaml.cs" />
+    <Compile Include="Pages\SplitDetailPage.xaml.cs" />
+    <Compile Include="Pages\SplitMasterPage.xaml.cs" />
+    <Compile Include="Pages\SplitRootPage.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CoreApp.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MvxFormsViewModel.cs" />
     <Compile Include="Pages\MvxFormsPage.xaml.cs">
       <DependentUpon>MvxFormsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\Option1ViewModel.cs" />
-    <Compile Include="ViewModels\Option2ViewModel.cs" />
-    <Compile Include="ViewModels\Option3ViewModel.cs" />
-    <Compile Include="ViewModels\RootContentViewModel.cs" />
+    <Compile Include="ViewModels\RootViewModel.cs" />
+    <Compile Include="ViewModels\SplitDetailNavViewModel.cs" />
+    <Compile Include="ViewModels\SplitDetailViewModel.cs" />
+    <Compile Include="ViewModels\SplitMasterViewModel.cs" />
+    <Compile Include="ViewModels\SplitRootViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
@@ -90,26 +83,26 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\Option1Page.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    <EmbeddedResource Include="Pages\SplitDetailNavPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SplitDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SplitMasterPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SplitRootPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\Option2Page.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\Option3Page.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\RootContentPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    <EmbeddedResource Include="Pages\RootPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

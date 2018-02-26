@@ -13,7 +13,7 @@ namespace MvxForms.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterNavigationServiceAppStart<MvxFormsViewModel>();
+            RegisterNavigationServiceAppStart<ViewModels.SplitRootViewModel>();
         }
     }
 }

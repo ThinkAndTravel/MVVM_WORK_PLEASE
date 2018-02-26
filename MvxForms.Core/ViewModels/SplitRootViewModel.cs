@@ -3,7 +3,7 @@ using System.Windows.Input;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 
-namespace Playground.Core.ViewModels
+namespace MvxForms.Core.ViewModels
 {
     public class SplitRootViewModel : MvxViewModel
     {
@@ -12,9 +12,16 @@ namespace Playground.Core.ViewModels
         public SplitRootViewModel(IMvxNavigationService navigationService)
         {
             _navigationService = navigationService;
+            try
+            {
+                ShowInitialMenuCommand = new MvxAsyncCommand(ShowInitialViewModels);
+                ShowDetailCommand = new MvxAsyncCommand(ShowDetailViewModel);
+          //      ShowDetailCommand.Execute();
+                ShowInitialMenuCommand.Execute();
+            }catch(System.Exception e)
+            {
 
-            ShowInitialMenuCommand = new MvxAsyncCommand(ShowInitialViewModels);
-            ShowDetailCommand = new MvxAsyncCommand(ShowDetailViewModel);
+            }
         }
 
         public IMvxAsyncCommand ShowInitialMenuCommand { get; private set; }

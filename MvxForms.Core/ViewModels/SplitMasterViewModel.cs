@@ -2,7 +2,7 @@
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 
-namespace Playground.Core.ViewModels
+namespace MvxForms.Core.ViewModels
 {
     public class SplitMasterViewModel : MvxViewModel
     {
