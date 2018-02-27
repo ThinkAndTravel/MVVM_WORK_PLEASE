@@ -10,6 +10,8 @@
     <AssemblyName>MvxForms.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,30 +30,63 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
-    <EmbeddedResource Include="Pages\MvxFormsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Modes.cs" />
+    <Compile Include="Pages\ChildPage.xaml.cs" />
+    <Compile Include="Pages\MixedNavFirstPage.xaml.cs" />
+    <Compile Include="Pages\MixedNavMasterDetailPage.xaml.cs" />
+    <Compile Include="Pages\MixedNavMasterRootContentPage.xaml.cs" />
+    <Compile Include="Pages\MixedNavTab1Page.xaml.cs" />
+    <Compile Include="Pages\MixedNavTab2Page.xaml.cs" />
+    <Compile Include="Pages\MixedNavTabsPage.xaml.cs" />
+    <Compile Include="Pages\ModalNavPage.xaml.cs" />
+    <Compile Include="Pages\ModalPage.xaml.cs" />
+    <Compile Include="Pages\NestedChildPage.xaml.cs" />
+    <Compile Include="Pages\NestedModalPage.xaml.cs" />
     <Compile Include="Pages\RootPage.xaml.cs" />
+    <Compile Include="Pages\SecondChildPage.xaml.cs" />
     <Compile Include="Pages\SplitDetailNavPage.xaml.cs" />
     <Compile Include="Pages\SplitDetailPage.xaml.cs" />
     <Compile Include="Pages\SplitMasterPage.xaml.cs" />
     <Compile Include="Pages\SplitRootPage.xaml.cs" />
+    <Compile Include="Pages\Tab1Page.xaml.cs" />
+    <Compile Include="Pages\Tab2Page.xaml.cs" />
+    <Compile Include="Pages\Tab3Page.xaml.cs" />
+    <Compile Include="Pages\TabsRootPage.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CoreApp.cs" />
-    <Compile Include="ViewModels\MvxFormsViewModel.cs" />
-    <Compile Include="Pages\MvxFormsPage.xaml.cs">
-      <DependentUpon>MvxFormsPage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Resources\BaseTheme.xaml.cs" />
+    <Compile Include="Resources\MainStyles.xaml.cs" />
+    <Compile Include="ViewModels\ChildViewModel.cs" />
+    <Compile Include="ViewModels\MixedNavFirstViewModel.cs" />
+    <Compile Include="ViewModels\MixedNavMasterDetailViewModel.cs" />
+    <Compile Include="ViewModels\MixedNavMasterRootContentViewModel.cs" />
+    <Compile Include="ViewModels\MixedNavTab1ViewModel.cs" />
+    <Compile Include="ViewModels\MixedNavTab2ViewModel.cs" />
+    <Compile Include="ViewModels\MixedNavTabsViewModel.cs" />
+    <Compile Include="ViewModels\ModalNavViewModel.cs" />
+    <Compile Include="ViewModels\ModalViewModel.cs" />
+    <Compile Include="ViewModels\NestedChildViewModel.cs" />
+    <Compile Include="ViewModels\NestedModalViewModel.cs" />
+    <Compile Include="ViewModels\OverrideAttributeViewModel.cs" />
     <Compile Include="ViewModels\RootViewModel.cs" />
+    <Compile Include="ViewModels\SecondChildViewModel.cs" />
+    <Compile Include="ViewModels\SheetViewModel.cs" />
     <Compile Include="ViewModels\SplitDetailNavViewModel.cs" />
     <Compile Include="ViewModels\SplitDetailViewModel.cs" />
     <Compile Include="ViewModels\SplitMasterViewModel.cs" />
     <Compile Include="ViewModels\SplitRootViewModel.cs" />
+    <Compile Include="ViewModels\Tab1ViewModel.cs" />
+    <Compile Include="ViewModels\Tab2ViewModel.cs" />
+    <Compile Include="ViewModels\Tab3ViewModel.cs" />
+    <Compile Include="ViewModels\TabsRootBViewModel.cs" />
+    <Compile Include="ViewModels\TabsRootViewModel.cs" />
+    <Compile Include="ViewModels\WindowChildViewModel.cs" />
+    <Compile Include="ViewModels\WindowViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
@@ -83,6 +118,68 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\BaseTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MainStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ChildPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MixedNavFirstPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MixedNavMasterDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MixedNavMasterRootContentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MixedNavTab1Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MixedNavTab2Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MixedNavTabsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ModalNavPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ModalPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\NestedChildPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\NestedModalPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RootPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SecondChildPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\SplitDetailNavPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -99,9 +196,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\RootPage.xaml">
+    <EmbeddedResource Include="Pages\Tab1Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Tab2Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Tab3Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\TabsRootPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

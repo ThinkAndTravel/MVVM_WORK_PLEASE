@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using MvvmCross.Forms.Views;
 using MvvmCross.Forms.Views.Attributes;
-using Xamarin.Forms;
 using MvxForms.Core.ViewModels;
+using Xamarin.Forms;
 
 namespace MvxForms.Core.Pages
 {
@@ -13,10 +13,6 @@ namespace MvxForms.Core.Pages
         public SplitRootPage()
         {
             InitializeComponent();
-            //this.Master = new SplitMasterPage();
-            //this.Detail = new SplitDetailPage();
-            //this.ViewModel.ShowDetailCommand.Execute();
-            //this.ViewModel.ShowInitialMenuCommand.Execute();
         }
     }
 }

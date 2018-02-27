@@ -12,16 +12,9 @@ namespace MvxForms.Core.ViewModels
         public SplitRootViewModel(IMvxNavigationService navigationService)
         {
             _navigationService = navigationService;
-            try
-            {
-                ShowInitialMenuCommand = new MvxAsyncCommand(ShowInitialViewModels);
-                ShowDetailCommand = new MvxAsyncCommand(ShowDetailViewModel);
-          //      ShowDetailCommand.Execute();
-                ShowInitialMenuCommand.Execute();
-            }catch(System.Exception e)
-            {
 
-            }
+            ShowInitialMenuCommand = new MvxAsyncCommand(ShowInitialViewModels);
+            ShowDetailCommand = new MvxAsyncCommand(ShowDetailViewModel);
         }
 
         public IMvxAsyncCommand ShowInitialMenuCommand { get; private set; }

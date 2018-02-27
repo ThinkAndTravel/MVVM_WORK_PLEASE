@@ -11,7 +11,7 @@ namespace MvxForms.Core.ViewModels
         {
             _navigationService = navigationService;
 
-         //   ShowChildCommand = new MvxAsyncCommand(/*async () => await _navigationService.Navigate<ChildViewModel>()*/);
+            ShowChildCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<ChildViewModel>());
         }
 
         public IMvxAsyncCommand ShowChildCommand { get; private set; }

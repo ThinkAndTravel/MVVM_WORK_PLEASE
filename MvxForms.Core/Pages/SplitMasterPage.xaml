@@ -7,9 +7,8 @@
     xmlns:viewModels="clr-namespace:MvxForms.Core.ViewModels;assembly=MvxForms.Core"
     x:Class="MvxForms.Core.Pages.SplitMasterPage" Title="SplitMaster page">
     <ContentPage.Content>
-      <StackLayout Spacing="10" x:Name="layout">
-        <BoxView Color="Yellow" HorizontalOptions="FillAndExpand" />
-        <Label Text="MvvmCross and Xamarin.Forms два брата анальных акробата!" VerticalOptions="Center" HorizontalOptions="Center" />
-      </StackLayout>
+      <StackLayout Margin="10">
+            <Label Text="I'm a master navigation page" />
+        </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>

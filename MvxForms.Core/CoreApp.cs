@@ -1,4 +1,6 @@
+using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 using MvxForms.Core.ViewModels;
 
@@ -13,7 +15,7 @@ namespace MvxForms.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterNavigationServiceAppStart<ViewModels.SplitRootViewModel>();
+            RegisterNavigationServiceAppStart<RootViewModel>();
         }
     }
 }

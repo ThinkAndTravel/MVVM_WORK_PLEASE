@@ -7,9 +7,9 @@
     xmlns:viewModels="clr-namespace:MvxForms.Core.ViewModels;assembly=MvxForms.Core"
     x:Class="MvxForms.Core.Pages.SplitDetailPage" Title="SplitDetail page">
     <ContentPage.Content>
-      <StackLayout Spacing="10" x:Name="layout">
-        <BoxView Color="Yellow" HorizontalOptions="FillAndExpand" />
-        <Label Text="MvvmCross and Xamarin.Forms два брата анальных акробата!" VerticalOptions="Center" HorizontalOptions="Center" />
-      </StackLayout>
+      <StackLayout Margin="10">
+            <Label Text="I'm a detail navigation page" />
+            <Button Text="Show Child" mvx:Bi.nd="Command ShowChildCommand"/>
+        </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>
